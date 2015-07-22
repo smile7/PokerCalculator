@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="bower_components/angular/angular.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<!--
+<div ng-app="" ng-init="firstName='Sisi'">
+    <p>Program name is <span ng-bind="firstName"></span></p>
+    <p>Name is <input type="text" ng-model="name"></p>
+    <p ng-bind="name"></p>
+    <p>{{name}}</p>
+    <p>Expression in AngJS: 5 + 3 = {{5+3}}</p>
+</div>
+-->
+
+<!------------------------------------------------------------------------------------->
+
+<!--
+<div ng-app="myApp" ng-controller="myCtrl">
+    <p>First name is: <input type="text" ng-model="fName"></p>
+    <p>Last name is: <input type="text" ng-model="lName"></p>
+    <p>Full name: {{fullName}}</p>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope)
+    {
+        $scope.fName="Sisi";
+        $scope.lName="tymiteva";
+        $scope.fullName = function() {
+            return $scope.fName + " " + $scope.lName;
+        }
+    });
+</script>
+-->
+
+<!------------------------------------------------------------------------------------->
+
+<!--
+<div ng-app="" >
+    <p>a = <input type="text" ng-model="a"></p>
+    <p>b = <input type="text" ng-model="b"></p>
+    <p>a*b={{a*b}} </p>
+</div>
+-->
+
+<!------------------------------------------------------------------------------------->
+
+<!--
+<div ng-app="" ng-init="persons=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
+    <ul>
+        <li ng-repeat="person in persons">
+            {{person.name + " from " + person.country}}
+        </li>
+    </ul>
+</div>
+-->
+
+<!------------------------------------------------------------------------------------->
+
+<!--
+<div ng-app="myApp" ng-controller="myCtrl">
+    <ul>
+        <li ng-repeat="person in persones |  orderBy:'country'">
+            {{(person.name | uppercase) + " from " + person.country}}
+        </li>
+    </ul>
+</div>
+<script>
+    angular.module('myApp', []).controller('myCtrl', function($scope)   {
+        $scope.persones = [
+            {name: 'Sisi', country: 'Mitevo'},
+            {name: 'Gosho', country: 'Dolna Mitropoliq'}
+        ]
+    })
+</script>
+-->
+
+<!------------------------------------------------------------------------------------->
+
+<!--
+ <div ng-app="myApp" ng-controller="customersCtrl">
+
+<table border="1px">
+  <tr ng-repeat="x in names">
+    <td>{{ $index + 1 }}</td>
+    <td ng-if="$odd" style="background-color:#f1f1f1">{{ x.Name }}</td>
+    <td ng-if="$even">{{x.Name}}</td>
+    <td ng-if="$odd" style="background-color:#f1f1f1">{{x.Country}}</td>
+    <td ng-if="$even">{{ x.Country }}</td>
+  </tr>
+</table>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("http://www.w3schools.com/angular/customers.php")
+    .success(function (response) {$scope.names = response.records;});
+});
+</script>
+-->
+
+<!------------------------------------------------------------------------------------->
+
+<!--
+<div ng-app="">
+    <p ng-show="true"> I am visible. </p>
+    <p ng-hide="false"> I am visible. </p>
+</div>
+-->
+
+<!------------------------------------------------------------------------------------->
+
+<!--
+<div ng-app="myApp" ng-controller="myCtrl">
+    <button ng-click="count = count + 1"> Click ME</button>
+    <p>{{count}}</p>
+</div>
+<script>
+    angular.module('myApp', [])
+           .controller('myCtrl', function($scope) {
+                $scope.count = 0;
+    })
+</script>
+-->
+
+<!------------------------------------------------------------------------------------->
+
+<!--
+<div ng-app="myApp" ng-controller="myCtrl">
+    <button ng-click="toggle()">Toggle</button>
+
+    <p ng-hide="myVar">
+        First name: <input type="text" ng-model="fName"><br>
+        Last name: <input type="text" ng-model="lName"><br><br>
+        The full name is {{fullName}} (why ???)
+    </p>
+</div>
+<script>
+    var app = angular.module('myApp', [])
+                     .controller('myCtrl', function($scope) {
+                $scope.fName="Sisi";
+                $scope.lName="tymiteva";
+                $scope.fullName = function() {
+                    return $scope.fName + " " + $scope.lName;
+                }
+                $scope.myVar = false;
+                $scope.toggle = function() {
+                    $scope.myVar = !$scope.myVar;
+                }
+    });
+</script>
+-->
+
+<!------------------------------------------------------------------------------------->
+
+<!--
+<div ng-app="myApp" ng-controller="formCtrl">
+    <form novalidate>
+        First Name:<br>
+        <input type="text" ng-model="user.firstName"><br>
+        Last Name:<br>
+        <input type="text" ng-model="user.lastName">
+        <br><br>
+        <button ng-click="reset()">RESET</button>
+    </form>
+    <p>form = {{user}}</p>
+    <p>master = {{master}}</p>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('formCtrl', function($scope) {
+        $scope.master = {firstName: "John", lastName: "Doe"};
+        $scope.reset = function() {
+            $scope.user = angular.copy($scope.master);
+        };
+        $scope.reset();
+    });
+</script>
+-->
+
+<!------------------------------------------------------------------------------------->
+
+<!--
+<div ng-app="myApp" ng-controller="myCtrl">
+    <p>{{ x1 }}</p>
+    <p>{{ x2 }}</p>
+    <p>{{ x3 }}</p>
+    <p>{{ x4 }}</p>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.x1 = "JOHN";
+        $scope.x2 = angular.isString($scope.x1);
+        $scope.x3 = angular.isNumber($scope.x1);
+        $scope.x4 = angular.lowercase($scope.x1);
+    });
+</script>
+-->
+
+<!------------------------------------------------------------------------------------->
+
+
+</body>
+</html>
