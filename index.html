@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <!-- build:js({.tmp,AngularJS-basics}) scripts/script.js -->
+
+
+    <!-- endbuild -->
+
+    <script src="scripts/handlebars.imgs.js"></script>
+    <script src="node_modules/handlebars/handlebars.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="node_modules/texas-master/texas.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+    <script src="scripts/script.js"></script>
+
+    <title>Poker Calculator</title>
+</head>
+<body>
+
+
+<div id="wrapper">
+
+    <header>
+        <div id="cards" align="center"></div>
+        <script id="cards-template" type='text/x-handlebars-template'>
+            {{#each cards}}
+               <img class="cards-list" alt="{{name}}" src="{{image}}" width="45px" height="60px"/>
+            {{/each}}
+        </script>
+    </header>
+
+    <section>   <br><br><br><br><br>
+        <div class="pl1" align="center">
+            <img src="imgs/b1fv.png" width="100px" height="150px" />
+        </div>
+    </section>
+
+</div>
+
+
+</body>
+</html>
