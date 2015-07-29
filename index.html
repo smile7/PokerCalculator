@@ -8,29 +8,20 @@
 
     <!-- endbuild -->
 
-    <script src="scripts/handlebars.imgs.js"></script>
-    <script src="node_modules/handlebars/handlebars.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="node_modules/texas-master/texas.js"></script>
+    <script src="node_modules/underscore/underscore.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 
+    <script src="scripts/texas.js"></script>
     <script src="scripts/script.js"></script>
 
     <title>Poker Calculator</title>
 </head>
 <body>
 
-
 <div id="wrapper">
-
-    <header>
-        <div id="cards" align="center"></div>
-        <script id="cards-template" type='text/x-handlebars-template'>
-            {{#each cards}}
-               <img class="cards-list" alt="{{name}}" src="{{image}}" width="45px" height="60px"/>
-            {{/each}}
-        </script>
-    </header>
 
     <section>   <br><br><br><br><br>
         <div class="pl1" align="center">
@@ -40,6 +31,20 @@
 
 </div>
 
+<form id="input">
+    <div>Set player 1 hand: <input type="text" id="p1" /></div>
+    <div>Set player 2 hand: <input type="text" id="p2" /></div>
+    <div>Set the flop: <input type="text" id="flop" /></div>
+    <div>Set the turn: <input type="text" id="turn" /></div>
+    <div>Set the river: <input type="text" id="river" /></div>
+</form>
+
+<form id="output">
+    Player 1 odds:<div id="output-p1"> </div><br>
+    Player 2 odds:<div id="output-p2"> </div>
+</form>
+
+<button id="go" onclick="show()">Calculate</button>
 
 </body>
 </html>
