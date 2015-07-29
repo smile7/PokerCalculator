@@ -16,3 +16,18 @@ html, body {
     padding-left: 2px;
     padding-top: 1px;
 }
+
+form {
+    font-size: 1.3em;
+    color: white;
+    margin: 25px;
+}
+
+input {
+    position: absolute;
+    margin-left: 10px;
+}
+
+#output-p1, #output-p2 {
+    display: inline;
+}
