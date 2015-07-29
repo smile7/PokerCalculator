@@ -31,8 +31,4 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-watch');
 
     grunt.registerTask('default', ['include-source:myTarget']);
-
-    grunt.registerTask("default", function() {
-        grunt.log.writeln("Hello world");
-    })
 };
