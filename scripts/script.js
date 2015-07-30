@@ -33,4 +33,9 @@ window.onload = function () {
 
     btnGO.addEventListener("click", showInputP1);
     btnGO.addEventListener("click", showInputP2);
+
+var s = getCode("8s");
+    s.deck();
+
+
 };

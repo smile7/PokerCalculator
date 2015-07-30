@@ -14,18 +14,36 @@
 
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 
+    <script src="scripts/angular.imgs.js"></script>
     <script src="scripts/texas.js"></script>
     <script src="scripts/script.js"></script>
 
     <title>Poker Calculator</title>
 </head>
-<body>
+<body ng-app="pokerCalc">
 
 <div id="wrapper">
 
-    <section>   <br><br><br><br><br>
+    <header>
+        <div ng-controller="ctrl" id="all-cards">
+            <table>
+                <tr>
+                    <td ng-repeat="image in images1">
+                        <img ng-src="{{image.src}}" alt="{{image.name}}" width="47px" height="63px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-repeat="image in images2">
+                        <img ng-src="{{image.src}}" alt="{{image.name}}" width="47px" height="63px" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </header>
+
+    <section>   <br><br>
         <div class="pl1" align="center">
-            <img src="imgs/b1fv.png" width="100px" height="150px" />
+            <img src="imgs/b1fv.png" width="100px" height="150px" id="closedCard" />
         </div>
     </section>
 
@@ -44,7 +62,9 @@
     Player 2 odds:<div id="output-p2"> </div>
 </form>
 
-<button id="go" onclick="show()">Calculate</button>
+<button id="go">Calculate</button>
+
+
 
 </body>
 </html>

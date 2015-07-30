@@ -1,0 +1,61 @@
+angular.module('pokerCalc', []).controller('ctrl', function($scope)   {
+    $scope.images1 = [
+        {name: 'Ac', src: 'imgs/1.png'},
+        {name: 'Kc', src: 'imgs/5.png'},
+        {name: 'Qc', src: 'imgs/9.png'},
+        {name: 'Jc', src: 'imgs/13.png'},
+        {name: '10c', src: 'imgs/17.png'},
+        {name: '9c', src: 'imgs/21.png'},
+        {name: '8c', src: 'imgs/25.png'},
+        {name: '7c', src: 'imgs/29.png'},
+        {name: '6c', src: 'imgs/33.png'},
+        {name: '5c', src: 'imgs/37.png'},
+        {name: '4c', src: 'imgs/41.png'},
+        {name: '3c', src: 'imgs/45.png'},
+        {name: '2c', src: 'imgs/49.png'},
+
+        {name: 'Ad', src: 'imgs/4.png'},
+        {name: 'Kd', src: 'imgs/8.png'},
+        {name: 'Qd', src: 'imgs/12.png'},
+        {name: 'Jd', src: 'imgs/16.png'},
+        {name: '10d', src: 'imgs/20.png'},
+        {name: '9d', src: 'imgs/24.png'},
+        {name: '8d', src: 'imgs/28.png'},
+        {name: '7d', src: 'imgs/32.png'},
+        {name: '6d', src: 'imgs/36.png'},
+        {name: '5d', src: 'imgs/40.png'},
+        {name: '4d', src: 'imgs/44.png'},
+        {name: '3d', src: 'imgs/48.png'},
+        {name: '2d', src: 'imgs/52.png'}
+    ];
+
+    $scope.images2 = [
+        {name: 'Ah', src: 'imgs/3.png'},
+        {name: 'Kh', src: 'imgs/7.png'},
+        {name: 'Qh', src: 'imgs/11.png'},
+        {name: 'Jh', src: 'imgs/15.png'},
+        {name: '10h', src: 'imgs/19.png'},
+        {name: '9h', src: 'imgs/23.png'},
+        {name: '8h', src: 'imgs/27.png'},
+        {name: '7h', src: 'imgs/31.png'},
+        {name: '6h', src: 'imgs/35.png'},
+        {name: '5h', src: 'imgs/39.png'},
+        {name: '4h', src: 'imgs/43.png'},
+        {name: '3h', src: 'imgs/47.png'},
+        {name: '2h', src: 'imgs/51.png'},
+
+        {name: 'As', src: 'imgs/2.png'},
+        {name: 'Ks', src: 'imgs/6.png'},
+        {name: 'Qs', src: 'imgs/10.png'},
+        {name: 'Js', src: 'imgs/14.png'},
+        {name: '10s', src: 'imgs/18.png'},
+        {name: '9s', src: 'imgs/22.png'},
+        {name: '8s', src: 'imgs/26.png'},
+        {name: '7s', src: 'imgs/30.png'},
+        {name: '6s', src: 'imgs/34.png'},
+        {name: '5s', src: 'imgs/38.png'},
+        {name: '4s', src: 'imgs/42.png'},
+        {name: '3s', src: 'imgs/46.png'},
+        {name: '2s', src: 'imgs/50.png'}
+    ]
+});
