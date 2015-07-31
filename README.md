@@ -7,8 +7,8 @@ You have the chance to do that now (not now, but when the code is written).
 ## Installation
   
   Download the project [here](https://github.com/smile7/PokerCalculator/) and then install the modules by clicking 
-*Shift + Right click* in the root folder. Click 'open command window here' and type 'npm install package.json'. After the installation finishes, type 'bower install bower.json' to install the bower components.<br>
-Note: You need to have Node.js installed first!
+*Shift + Right click* in the root folder. Click 'open command window here' and type *npm install package.json*. After the installation finishes, type *bower install bower.json* to install the bower components.<br>
+**Note:** You need to have *Node.js* installed first!
 <hr>
 
 ## Documentation
