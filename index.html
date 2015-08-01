@@ -17,6 +17,7 @@
     <script src="scripts/angular.imgs.js"></script>
     <script src="scripts/texas.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/manageCards.js"></script>
 
     <title>Poker Calculator</title>
 </head>
@@ -29,26 +30,82 @@
             <table>
                 <tr>
                     <td ng-repeat="image in images1">
-                        <img ng-src="{{image.src}}" alt="{{image.name}}" width="47px" height="63px" />
+                        <img ng-src="{{image.src}}" onclick="placeCard(this)" name="{{image.name}}" class="cards" alt="{{image.name}}" width="47px" height="63px" />
                     </td>
                 </tr>
                 <tr>
                     <td ng-repeat="image in images2">
-                        <img ng-src="{{image.src}}" alt="{{image.name}}" width="47px" height="63px" />
+                        <img ng-src="{{image.src}}" onclick="placeCard(this)" name="{{image.name}}" class="cards" alt="{{image.name}}" width="47px" height="63px" />
                     </td>
                 </tr>
             </table>
         </div>
     </header>
 
-    <section>   <br><br>
-        <div class="pl1" align="center">
-            <img src="imgs/b1fv.png" width="100px" height="150px" id="closedCard" />
-        </div>
+    <section>
+        <table>
+            <tr>
+                <td id="p1">
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                </td>
+                <td id="p5">
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                </td>
+            </tr>
+            <tr>
+                <td id="p2">
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                </td>
+                <td id="board">
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                </td>
+                <td id="p6">
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                </td>
+            </tr>
+            <tr>
+                <td id="p3">
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                </td>
+                <td id="p7">
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                </td>
+            </tr>
+            <tr>
+                <td id="p4">
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                </td>
+                <td id="p8">
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                </td>
+            </tr>
+            <tr>
+                <td id="p9">
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                    <img src="imgs/closed.png" onclick="placeCard(this)" class="closed" width = "80px" height="120px" />
+                </td>
+            </tr>
+        </table>
     </section>
 
 </div>
 
+
+<!-- this is for script.js (just an experiment)
 <form id="input">
     <div>Set player 1 hand: <input type="text" id="p1" /></div>
     <div>Set player 2 hand: <input type="text" id="p2" /></div>
@@ -64,7 +121,8 @@
 
 <button id="go">Calculate</button>
 
-
-
+<div id="trial" onclick="Try()">Click me</div>
+<div id="trial2"></div>
+-->
 </body>
 </html>
